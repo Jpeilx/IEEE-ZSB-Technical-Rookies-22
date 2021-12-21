@@ -1,20 +1,22 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace  std ;
-int guss_game( int mo );
+int guss_game( int mo, int t  );
 int main (){
-   int n ,  mo =0 ;
-   n = guss_game(mo);
-   cout << "you take "<< n<<" tries to win  " ;
+    srand(time(NULL)) ;
+    int n ,  t= rand() % 11 , mo =0 ;
+    n = guss_game(mo, t);
+    cout << "you take "<< n<<" tries to win  " ;
 }
-int guss_game( int mo ){
-  mo++ ;
-  int n , t  ;
-  cout<<"Guss a number "<<endl ;
-  cin>>n ;
-  t = rand()%11 ;
+int guss_game( int mo , int t  ){
+    mo++ ;
+    int n  ;
+    cout<<"Guss a number "<<endl ;
+    cin>>n ;
     if (n==t)
         return mo ;
-    return guss_game(mo) ;
+    return guss_game(mo,t) ;
 
 
 }
