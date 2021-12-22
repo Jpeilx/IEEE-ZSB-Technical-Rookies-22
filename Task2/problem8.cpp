@@ -1,3 +1,9 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <vector>
+#include <list>
+#include <sstream>
 #include <string>
 #include <iterator>
 using namespace std ;
@@ -17,6 +23,11 @@ int main (){
    }
    vi2=vi1 ;
    sort(all(vi2)) ;
+    xx(i,0,vi2.size()-1){
+        if (vi2[i]==vi2[i+1]){
+            vi2.erase(vi2.begin()+i) ;
+            i-- ;
+        }}
     xx(i,0,n){
         if (vi1[i]==vi2[1])
             vs1.push_back(vs[i])  ;
