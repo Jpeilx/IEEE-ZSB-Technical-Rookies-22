@@ -17,15 +17,16 @@ vector<T> read_line_array();
 int main () {
     v v1  = read_line_array<int>();
     xx(i,0,v1.size()-1){
-        if (v1[i]==v1[i+1])
+        if (v1[i]==v1[i+1]){
             v1.erase(v1.begin()+i) ;
-    }
+            i-- ; 
+    }}
     v::iterator it=v1.begin();
     for (;it!=v1.end(); it++)
         cout<<*it<<" " ;
 
 
-    }
+}
 
 template<typename T> vector<T> read_line_array()
 {
@@ -42,4 +43,3 @@ template<typename T> vector<T> read_line_array()
     }
     return arr;
 }
-
