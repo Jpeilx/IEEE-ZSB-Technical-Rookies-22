@@ -16,12 +16,14 @@ int guss_game2(int t ,int tries );
 #define all(x) x.begin(), x.end()
 #define xx(i,a,n) for (int i = a ; i<n ; i++)
 int main () {
+    
+    
     srand(time(NULL)) ;
     int t = rand()%898+100 , tries = 0 ;
-    cout<<t<<endl ;
     int tr = guss_game2(t , tries) ;
     cout<<"you take "<<tr<<" tries to win" ;
 
+    
 }
 int guss_game2(int t ,int tries) {
     int miss =0 ,  hit = 0   ;
